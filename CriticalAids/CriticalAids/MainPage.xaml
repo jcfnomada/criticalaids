@@ -5,20 +5,32 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Critical Aids 1225883736" HorizontalTextAlignment="Center" TextColor="AliceBlue" FontSize="36"/>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <Label Text="Paciente desmaiado" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Verificações" FontSize="Large" Padding="5"></Label>
+        <Grid Padding="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <CheckBox Grid.Column="0"  Grid.Row="0"></CheckBox>
+            <Label Text="Verificar a pulsação" Grid.Column="1"  Grid.Row="0"></Label>
+            <CheckBox Grid.Column="0"  Grid.Row="1"></CheckBox>
+            <Label Text="Verificar a respiração" Grid.Column="1"  Grid.Row="1"></Label>
+            <CheckBox Grid.Column="0"  Grid.Row="2"></CheckBox>
+            <Label Text="Ver os olhos" Grid.Column="1"  Grid.Row="2"></Label>
+        </Grid>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <StackLayout.Style>
+                <Style TargetType="Button">
+                    <Setter Property="HeightRequest" Value="40"/>
+                </Style>
+            </StackLayout.Style>
+            <Button Text="Acordou"></Button>
+            <Button Text="Continua Desmaiado"></Button>
+            <Button Text="Está com convulsões"></Button>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
